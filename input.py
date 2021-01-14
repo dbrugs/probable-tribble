@@ -2,7 +2,7 @@
 #IWM,$RUT.X, IYY,$DJI2MN
 #Vol indexes $VIX.X,$VXX.X,$VXN.X,$RVX.X
 
-from tdameritrade.auth import c
+from auth import c
 futures_months = ['F','G','H','J','K','M','N','Q','U','V','X','Z']
 data_dict = dict({
 #keys = instrument type, values = dict
