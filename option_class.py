@@ -1,9 +1,9 @@
 from datetime import datetime
-from option_math_brugs.d1_d2 import calc_d1, calc_d2
-import option_math_brugs.greeks
+from d1_d2 import calc_d1, calc_d2
+import greeks
 #from tdameritrade.grab_data import get_price_data
-from option_math_brugs.BS import Calculate_IV_Call_Put
-from tdameritrade.quotes import get_option_quote, get_bid_ask_last_mark
+from BS import Calculate_IV_Call_Put
+from quotes import get_option_quote, get_bid_ask_last_mark
 import json
 from tda.client import Client
 
