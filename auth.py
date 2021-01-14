@@ -1,4 +1,4 @@
-from config.credentials import credentials_dict
+from credentials import credentials_dict
 from tda import auth, client
 import json
 
