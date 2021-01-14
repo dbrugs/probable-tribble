@@ -2,7 +2,7 @@
 @@brugs_bunny"""
 
 import numpy as np
-from option_math_brugs.d1_d2 import calc_d1, calc_d2
+from d1_d2 import calc_d1, calc_d2
 from scipy.stats import norm
 import math
 from datetime import datetime
