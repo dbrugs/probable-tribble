@@ -1,8 +1,8 @@
 """save data to csv, json, and export to sql database
 @@@brugs_bunny"""
 import quandl
-from data_cleanup.input import data_dict
-from config.credentials import credentials_dict
+from input import data_dict
+from credentials import credentials_dict
 
 from quandl.errors.quandl_error import NotFoundError
 
