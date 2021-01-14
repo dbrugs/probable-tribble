@@ -1,6 +1,6 @@
-from tdameritrade.auth import c
+from auth import c
 from tda.client import Client
-from data_cleanup.input import futures_month
+from input import futures_month
 import time
 import TypeError
 
