@@ -1,5 +1,5 @@
 from option_class import Option
-from tdameritrade.auth import c
+from auth import c
 
 
 class Asset:
