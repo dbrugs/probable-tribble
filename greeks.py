@@ -1,8 +1,8 @@
 import numpy as np
 import scipy.stats as stats
-import option_math_brugs.vol_math
+import vol_math
 from scipy.stats import norm
-from option_math_brugs.d1_d2 import calc_d1, calc_d2
+from d1_d2 import calc_d1, calc_d2
 
 ##Greeks (add higher derivative greeks later)
 
