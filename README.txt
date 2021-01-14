@@ -1,83 +1,55 @@
-README:
+EADME:
 
+The idea is to create a good multi-asset strategy fund with
+good Sharpe ratio. It should be scalable and look to base capital limits on optimal
+R/R strategies (goal is not to have 1BB AUM, but to have the most risk adjusted positive return
+for assets assumed)
+  -this is because all of these strategies will have liquidity constraints(esp the income strats)
+  -goal is to retire, not blow up 3 accounts
+---------------------------------------------------------
 
-ENV CONFIG:
+Current progress (in python):
+option_class
+asset_class
+strategy_class
+portfolio_class
 
-conda activate default_env
-atom
+data pipeline (honestly probs not too hard):
+td-api wrapper
+homebrew with requests/json packages
+-------------
 
+data object
 
-GIT CONFIG:
+some ideas for strategies and their assumptions:
 
-/Desktop/scripts/yog_soggoth
+  -strats broken up into types:
+    -income (short vol, long contango etc)
+        -commodity curve strats
+          -grains are the best(good, reliable contango), but most commodities have good carry
+        -SPX short vol strat
+          -sell 20/15 deltas 45 days out
+          -buy straddles >100(200) days out
+          -buy gamma risk straddles within 2 weeks of exp to prevent VIX events
+          (this is where the second-order greeks come in)
+          -selling short term vol/gamma scalp (quick cash, small percentage of AUM, large gamma risk)
+          -adjust deltas every 5/50
+          -this strat is short IV with gamma hedge
+          AND owning long-term straddles as an asset)
+        -future possible HFT vol arb strats(seriously so far away):
+          probably need C or Fortran
 
-TD API CONFIG:
-https://github.com/areed1192/td-ameritrade-python-api/blob/master/README.md
------------------------------------------------------------------------------
-backend
+    -trend following (technical analysis, 3:1 risk/reward payoff strats, fundamental theses without big premiums)
 
-data_pull
-  =tda
-  =quandl
-data_clean
-    -fastdata
-      display json
-    -slow_data
-  |    -json to df
-  |sync-quandl dict to df
-  |    -yfinance dict to df
-        dump
-        -csv/sql/json
-          --cleanup
-            return DataFrame
-          --store
-            sql
+    -"black swan strats" (these types would encompass both "Big Short opps"
+    AND tail risk/loss mitigation)
+      -these strats will tend to have a high theta bill, so the payoffs should be 1:100+
+      or easily offset by income strats
 
-
-
-
-
-
-
----------------------------------------------------------------------------
-Window1
-  OVERVIEW TAB
-  --------------------------
-    Economic Bellweather Box
-      Watchlist/Quotes
-      "Signal Gradient Map"
-    SPX Box
-      Quote
-      riskfree
-      IV
-      metrics monitor
-        straddle price
-        20 Delta Strangle price
-        Delta
-          delta bleed
-        Vega
-          DvegaDvol(or whatever)
-    NewsBox/TextBox/Stream
-      "Signal Alert"
-      RSS feed
-
-  my-tab
-  ------------------------
-    portfolio
-      asset
-  --------------
-        option
-  -------------
-          price(quote,theoretical,sigma,time)
-            d1,d2,greeks
-
-  Settingstab
-  ----------------------------------
-
-Window2 - Visualization Window
-  greek visualization for SPX
-  portfolio metrics
-    equity curve
-    return vol viz
-    netliq vol viz
-    net-costs
+current workflow ideas:
+using atom with teletype
+https://blog.atom.io/2017/11/15/code-together-in-real-time-with-teletype-for-atom.html
+live share VScode
+https://docs.microsoft.com/en-us/visualstudio/liveshare/use/vscode
+git/github
+open to other collab tools
