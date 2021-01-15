@@ -17,6 +17,9 @@ portfolio_class
 data pipeline (honestly probs not too hard):
 td-api wrapper
 homebrew with requests/json packages
+developer.tdamertirade.com for streaming quotes/instrument info/main data
+quandl/yfinance/etc for historical data
+
 -------------
 
 data object
