@@ -34,7 +34,7 @@ some ideas for strategies and their assumptions:
           -sell 20/15 deltas 45 days out
           -buy straddles >100(200) days out
           -buy gamma risk straddles within 2 weeks of exp to prevent VIX events
-          (this is where the second-order greeks come in)
+          (this is where the second-order greeks come in re: Cem Karsan)
           -selling short term vol/gamma scalp (quick cash, small percentage of AUM, large gamma risk)
           -adjust deltas every 5/50
           -this strat is short IV with gamma hedge
